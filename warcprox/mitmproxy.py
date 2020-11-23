@@ -399,8 +399,6 @@ class MitmProxyHandler(http_server.BaseHTTPRequestHandler):
             else:
                 self._determine_host_port()
                 assert self.url
-            # Connect to destination
-            self._connect_to_remote_server()
             # Check if target hostname:port is in `bad_hostnames_ports` cache
             # to avoid retrying to connect. Cached value is http status code.
             cached = None
@@ -411,6 +409,8 @@ class MitmProxyHandler(http_server.BaseHTTPRequestHandler):
                 self.logger.info('Cannot connect to %s (cache)', hostname_port)
                 self.send_error(cached, exception=Exception('Cached Failed Connection'))
                 return
+            # Connect to destination
+            self._connect_to_remote_server()
         except warcprox.RequestBlockedByRule as e:
             # limit enforcers have already sent the appropriate response
             self.logger.info("%r: %r", self.requestline, e)
