@@ -401,6 +401,7 @@ class MitmProxyHandler(http_server.BaseHTTPRequestHandler):
                 assert self.url
             # Connect to destination
             self._connect_to_remote_server()
+            return
             # Check if target hostname:port is in `bad_hostnames_ports` cache
             # to avoid retrying to connect. Cached value is http status code.
             cached = None
