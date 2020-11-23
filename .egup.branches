@@ -1,0 +1,10 @@
+  remotes/origin/2.x                                 719380e refactor some general mitm proxy stuff into mitmproxy.py
+  remotes/origin/HEAD                                -> origin/master
+  remotes/origin/adds-logging-for-failed-connections 36784de Merge branch 'master' into adds-logging-for-failed-connections
+  remotes/origin/crawl-log                           42f5e9b add --crawl-log-dir option to fix failing test
+  remotes/origin/do_not_archive                      289f433 isinstance(controller._postfetch_chain[0], EarlyPlugin)
+  remotes/origin/galgeek-patch-1                     240b6da a minimal example
+  remotes/origin/plugins-v2                          05148cf log error response writing to trough
+  remotes/origin/qa                                  30db93a Merge branch 'failed_url.timestamp' into qa
+  remotes/origin/readmeFixAnsible                    7c9daa7 rm emoji (for ansible?)
+  remotes/origin/trough                              c0cb59e Merge branch 'master' into trough
